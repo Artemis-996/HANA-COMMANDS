@@ -5,3 +5,14 @@ alter database SHA add 'scriptserver';
 grant modeling to XSA_DEV;
 call grant_activated_role('sap.hana.xs.ide.roles::Developer','XSA_DEV');
 q 
+
+
+
+
+CREATE DATABASE <database_name> [ AT [ LOCATION ] '<hostname>[:<port_number> ] ' ]
+ [ ADD '<servicetype>' [ AT [ LOCATION ] '<hostname>[:<port_number> ] ' ] ]
+ [ { AS REPLICA OF [ <source_database_name> ] AT [ LOCATION ] '<hostname>[:<port_number> ] '
+      | [ KEY MANAGEMENT CONFIGURATION <configuration_id> ] | SYSTEM USER PASSWORD <password> } ]
+ [ OS USER '<username>' OS GROUP '<groupname>' ] 
+ [ NO START ]
+ [ <restart_mode> RESTART ]
